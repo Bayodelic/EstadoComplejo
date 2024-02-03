@@ -7,23 +7,11 @@ const App = () => {
     right: 0,
   })
 
-  const handleLeftClicks = () =>{
-    const newClicks = {
-      left: clicks.left + 1,
-      right: clicks.right
-    }
+  const handleLeftClicks = () => setClicks({...clicks,left: clicks.left + 1 });
+  
 
-    setClicks(newClicks);
-  }
+  const handleRightClicks = () => setClicks({ ...clicks,right: clicks.right + 1});
 
-  const handleRightClicks = () => {
-    const newClicks = {
-      left: clicks.left,
-      right: clicks.right + 1
-    }
-
-    setClicks(newClicks);
-  }
 
   return (
     <div>
